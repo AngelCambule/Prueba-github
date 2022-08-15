@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+header {
+    grid-area: header;
+    color: white;
+}
+nav {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid white;
+    background-image: linear-gradient(to bottom, rgba(54, 54, 54, 0.6), rgb(36, 36, 3, 0.6));
+}
+nav h1 {
+    margin-top: 5px;
+}
+nav ul {
+    list-style: none;
+}
+nav ul a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+nav ul a:hover {
+    border-top: 1px white solid;
+    border-bottom: 1px white solid;
+}
+nav ul li {
+    display: inline-block;
+    padding: 10px;
+}
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 10% 60% 25% 5%;
+    grid-template-areas: 
+    "header header header"
+    "main main main"
+    "section1 section2 section3"
+    "footer footer footer"
+    ;
+    height: 800px;
+    background: url(../img/fondohosting.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+main {
+    grid-area: main;
+    color: white;
+    margin-top: 40px;
+}
+main ul {
+    list-style: none;
+}
+main ul li {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.desc {
+    padding: 20px;
+}
+.section1 {
+    grid-area: section1;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid white;
+}
+.section2 {
+    grid-area: section2;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid white;
+    border-left: 1px solid white;
+}
+.section3 {
+    grid-area: section3;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid white;
+    border-left: 1px solid white;
+}
+footer {
+    grid-area: footer;
+    text-align: center;
+    color: white;
+    border-top: 1px white solid;
+}
+
+@media screen and (max-width:780px) {
+    section h3 {
+        font-size: 13px;
+    }
+    section p {
+        font-size: 12px;
+    }
+}
